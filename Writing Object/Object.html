@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+
+  <title>Object</title>
+
+  <script>
+
+      function nameOfFunction() {
+
+      }
+      var fruit = ['coupe', 'sedan', 'SUV'];
+      alert(fruit[0]);
+
+      function CarsVerison(make, model, color, notice, name) {
+         this.name = name,
+         this.Make = Make,
+         this.Model = Model,
+         this.Color = Color,
+         this.Notice = function() {
+           aler(("The car is " + this.type)
+           )
+         }
+
+      }
+
+      var Gothiyka = new CarsVerison('Honda', 'Kia', 'Cadillac', 'Gothiyka');
+      console.log(GothiykaCars);
+      var Cars = {
+        Make: 'Mercedes-Benz',
+        Model: 'C300',
+        Color: 'Midnight Gray',
+        notice: function() {
+           alert("The car is " + this.type);
+        }
+       }
+
+      alert(Cars['Make']);
+      alert(Cars.Model);
+
+      /*
+      cars.name = "Gothiyka";
+
+    console.log(Cars);
+
+    for (x in cars) {
+        console.log(cars[x]);
+    }
+
+*/
+
+  </script>
+
+  </head>
+
+  <body>
+
+    <button onclick="Cars.notice()">Click here</button>
+
+  </body>
+
+
+  </html>
