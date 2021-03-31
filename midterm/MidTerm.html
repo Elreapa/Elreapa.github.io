@@ -14,6 +14,8 @@
 
        html = "<p>Paul Booth is a tattoo artist, sculptor, painter, filmmaker and musician living in New York City. Booth is known for his use of black and grey ink tattoo work depicting dark surrealism styled pieces. He has gained a cult-like following around the world and has had celebrity clientele, which include members of rock bands such as Slipknot, Mudvayne, Slayer, Pantera, Soulfly, and Sepultura.</p><img src='Paul Booth.jpeg'>";
        document.getElementById("content").innerHTML = html;
+       document.getElementById("paul").style.background = "red";
+
        }
 
 
@@ -22,6 +24,8 @@
           html = "<p>Katherine Von Drachenberg  (born March 8, 1982), known as Kat Von D, is an American tattoo artist, model, entrepreneur, and television personality. She is best known for her work as a tattoo artist on the TLC reality television show LA Ink, which premiered in the United States on August 7, 2007, and ran for four seasons. She is also known for being the former head of Kat Von D Beauty (renamed KVD Vegan Beauty).</p><img src='Kat.jpg'>";
 
         document.getElementById("content").innerHTML = html;
+        document.getElementById("kat").style.background = "red";
+
         }
 
         function button3() {
@@ -29,11 +33,34 @@
           html = "<p>Oliver Peck is an artist whose whole life revolves around tattooing. He began tattooing when he was just 19 years old in his hometown of Dallas, TX and has perfected his precise and traditional tattooing style making him one of the best and well-known 'old school' American style artists.</p><img src='Oliver-peck.jpg'>";
 
         document.getElementById("content").innerHTML = html;
+        document.getElementById("oliver").style.background = "red";
+
         }
 
+        function button4() {
 
+          document.getElementById("subscribe").style.background = "red";
 
+          alert('Thank You for Subscribing')
 
+        }
+
+        function mouseDown() {
+
+          document.getElementById("myP").style.color = "red";
+
+        }
+
+        function mouseUp() {
+
+          document.getElementById("myP").style.color = "green";
+
+        }
+
+        function myFunction() {
+          alert("Page is Loaded");
+
+        }
 
 
        </script>
@@ -42,11 +69,10 @@
      <style>
 
      header {
-       background-color: #000000
-       width:100%
+       background-color: #black;
+       width:100%;
        height: 150px;
        padding: 4px;
-
      }
 
      div {
@@ -74,12 +100,11 @@
 
 </head>
 
-        <body>
+        <body onload="myFunction()">
 
 
 
-
-        <img src='Gothiyka Logo1.png'>
+         <img src='Gothiyka Logo1.png'>
 
 
         <br />
@@ -87,9 +112,9 @@
         <br />
 
         <h2>Artist</h2>
-        <button onclick="myFirstfunction()">Paul Booth</button>
-        <button onclick="button2()">Kat Von D</button>
-        <button onclick="button3()">Oliver-Peck</button>
+        <button id='paul' onclick="myFirstfunction()">Paul Booth</button>
+        <button id='kat' onclick="button2()">Kat Von D</button>
+        <button id='oliver' onclick="button3()">Oliver-Peck</button>
 
 
 
@@ -106,19 +131,19 @@
 
 
 
-   <body>
+
 
      <center>
        <b />
        <b />
      <img  width="800" src='PHONIEX.jpg' />
 
-     <p><strong>GOTHIYKA</strong> is to connect the public with respected artists and studios all over the world.</p>
-     <p>Providing a marketing tool for studios and artists to reach potential customers and create a home
-       of tattooing online and on your smart phone.</p>
-       <p>A place where the public can feel safe knowing all Artists featured are only the best, as everyone
-         deserves a good tattoo.</p>
-       </P><br />
+     <p id="myP" onmousedown="mouseDown()"
+     onmouseup="mouseUp()"><strong>GOTHIYKA</strong> is to connect the public with respected artists and studios all over the world.
+        A place where the public can feel safe knowing all Artists featured are only the best, as everyone
+        deserves a good tattoo.
+       </P>
+       <br />
 
      </center>
 
@@ -130,7 +155,7 @@
      <form action-"http://www.example.com/subscribe.php">
            <p>Subscribe to our email list:</p>
            <input type-"text" name-"email" />
-           <button>Subscribe</button>
+           <button id='subscribe' onclick="button4()">Subscribe</button>
            </form>
 
 
