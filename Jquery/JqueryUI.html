@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Effects - addClass demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+   .toggler { width: 500px; height: 200px; position: relative; }
+   #button { background: #FF5733; padding: .5em 1em; text-decoration: none; box-shadow: 0 0 10px 2px; }
+   #effect { width: 240px;  padding: 1em; border: 1px solid #000; background: #FF5733; color: #333; box-shadow: 0 0 10px 2px; }
+   .newClass { text-indent: 40px; letter-spacing: .4em; width: 410px; height: 120px; padding: 30px; margin: 10px; font-size: 1.1em; }
+ </style>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script>
+ $( function() {
+   $( "#button" ).on( "click", function() {
+     $( "#effect" ).addClass( "newClass", 1000, callback );
+   });
+
+   function callback() {
+     setTimeout(function() {
+       $( "#effect" ).removeClass( "newClass" );
+     }, 1500 );
+   }
+ } );
+
+ $( function() {
+   var state = true;
+   $( "#button" ).on( "click", function() {
+     if ( state ) {
+       $( "#effect" ).animate({
+         backgroundColor: "#aa0000",
+         color: "#fff",
+         width: 500
+       }, 1000 );
+     } else {
+       $( "#effect" ).animate({
+         backgroundColor: "#fff",
+         color: "#000",
+         width: 240
+       }, 1000 );
+     }
+     state = !state;
+   });
+ } );
+ </script>
+</head>
+<body>
+
+     <a href="#"><img src="Gothiyka.png" /></a>
+     <br />
+     <br />
+
+  <img width="300"  src="NYC.jpg">
+  <br />
+  <br />
+
+<div class="toggler">
+ <div id="effect" class="ui-corner-all">
+     New York has architecturally noteworthy buildings.
+</div>
+<br />
+<button id="button" class="ui-state-default ui-corner-all">NYC</button>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
